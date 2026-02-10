@@ -28,12 +28,23 @@ body{
 .logo{width:24px;height:24px; fill:var(--primary)}
 .nav-actions{display:flex; align-items:center; gap:8px}
 .icon-btn{
+  position:relative;
   display:grid; place-items:center; width:40px;height:40px;border-radius:12px;border:1px solid var(--border); background:transparent; cursor:pointer;
-  transition:transform .08s ease, background .2s ease, border-color .2s ease;
+  transition:transform .08s ease, .2s ease, border-color .2s ease;
 }
 .icon-btn:hover{transform:translateY(-1px); background:var(--panel)}
 .icon-btn svg{width:20px;height:20px; fill:var(--text)}
-.cart-badge{position:absolute; margin-left:18px; margin-top:-14px; background:var(--bad); color:#fff; font-size:11px; padding:2px 6px; border-radius:999px}
+.cart-badge{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  background:var(--bad);
+  color:#fff;
+  font-size:11px;
+  padding:4px 6px;
+  border-radius:999px;
+  line-height:1;
+}
 
 /* Layout */
 .container{max-width:1200px; margin:24px auto; padding:0 16px}
@@ -85,7 +96,7 @@ body{
 
 .wish-btn{
   display:flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; background:transparent;
-  border:1px solid var(--border); cursor:pointer; transition:transform .08s ease, border-color .2s ease, background .2s ease;
+  border:1px solid var(--border); cursor:pointer; transition:transform .08s ease, border-color .2s ease, .2s ease;
 }
 .wish-btn svg{width:18px;height:18px; fill:var(--muted)}
 .wish-btn[aria-pressed="true"]{border-color:#f43f5e; background:rgba(244,63,94,.12)}
